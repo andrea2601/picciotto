@@ -40,7 +40,7 @@ const AddNewMessage = ({ reloadData, setReloadData }) => {
           onChange={(e) => setUserInput(e.target.value)}
         />
 
-        <input type="submit" value="Invia" />
+        <input className={styles.btn} type="submit" value="Invia" />
       </form>
     </div>
   );
