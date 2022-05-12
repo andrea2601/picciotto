@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { GET, DELETE } from "../../utils/api";
 import styles from "./[id].module.scss";
+import SecondLayout from "../../components/SecondLayout";
 
 const DynamicMessage = () => {
   const router = useRouter();
@@ -27,7 +28,7 @@ const DynamicMessage = () => {
     );
   }, []);
 
-  return (
+  return (<SecondLayout>
     <div className={styles.wrapper}>
       <Link href={"/"}>
         <a>🔙</a>
@@ -39,6 +40,7 @@ const DynamicMessage = () => {
         <button onClick={() => onMessageDelete(messageData.id)}>x</button>
       </div>
     </div>
+  </SecondLayout>
   );
 };
 
