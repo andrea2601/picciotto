@@ -4,6 +4,7 @@ import AddNewMessage from "../components/AddNewMessage";
 import MessagesList from "../components/MessagesList";
 import styles from "../styles/Home.module.css";
 import DefaultLayout from "../components/DefaultLayout";
+import Hero from "../components/Hero";
 
 export default function Home() {
   const [reloadData, setReloadData] = useState(false);
@@ -16,6 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <DefaultLayout>
+      <Hero/>
         <main className={styles.main}>
           <AddNewMessage reloadData={reloadData} setReloadData={setReloadData} />
           <MessagesList reloadData={reloadData} setReloadData={setReloadData} />
